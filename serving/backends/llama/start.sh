@@ -144,7 +144,7 @@ darwin_load() {
     fi
 
     export DYLD_LIBRARY_PATH="$build_dir:${DYLD_LIBRARY_PATH:-}"
-    "$server" --host 127.0.0.1 --port "$LLAMA_PORT" --models-preset "$cfg"
+    "$server" --host 0.0.0.0 --port "$LLAMA_PORT" --models-preset "$cfg"
 }
 
 linux_load() {
@@ -178,7 +178,7 @@ linux_load() {
     fi
 
     export LD_LIBRARY_PATH="$build_dir:${LD_LIBRARY_PATH:-}"
-    "$server" --host 127.0.0.1 --port "$LLAMA_PORT" --models-preset "$cfg"
+    "$server" --host 0.0.0.0 --port "$LLAMA_PORT" --models-preset "$cfg"
 }
 
 # ── Main ─────────────────────────────────────────────────────────────────
